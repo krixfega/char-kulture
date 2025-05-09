@@ -1,0 +1,32 @@
+/* 1. Import the two Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playball&display=swap');
+
+:root {
+  /* Page background & default text */
+  --primary-bg:  #fefcf8;
+  --text-dark:   #3e3620;
+
+  /* Button & navbar */
+  --dark-btn:    #3e3620;
+  --btn-text:    #e0d7b0;
+
+  /* Accent (active link underline, highlights) */
+  --accent:      #e0d7b0;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-bg);
+  color: var(--text-dark);
+  /* 2. Primary font for body and UI */
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* 3. Headers & hero text get the Playball flair */
+h1, h2, h3, h4, h5, h6, .hero-title {
+  font-family: 'Playball', cursive;
+}
+a {
+  color: var(--text-dark);
+  text-decoration: none;
+}

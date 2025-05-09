@@ -1,0 +1,114 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    background: var(--text-dark);
+    z-index: 100;
+    padding: 1.5rem 0;
+    box-shadow: 0 1px 4px rgba(142, 142, 142, 0.1);
+    margin: 0;
+  }
+  .nav-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .logo {
+    padding: 0;
+  }
+  .logo-img {
+    height: 2rem;
+    display: block;
+  }
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  .nav-link {
+    padding: 0.5rem;
+    color: var(--primary-bg);
+    transition: color 0.2s;
+  }
+  .nav-link:hover {
+    color: var(--accent);
+  }
+  .nav-link.active {
+    border-bottom: 2px solid var(--accent);
+  }
+  .btn-cta {
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: var(--dark-btn);
+    border-radius: 25px;
+    font-weight: 700;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-cta:hover {
+    background: var(--primary-bg);
+    color: var(--text-dark);
+  }
+/* HAMBURGER ICON (hidden on desktop) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  .menu-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--accent);
+    transition: all 0.3s;
+  }
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+    .menu-icon {
+      display: flex;
+    }
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    .logo-img {
+        height: 32px;
+      }
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--text-dark);
+      flex-direction: column;
+      display: none;
+      padding-bottom: 20px;
+    }
+    .nav-menu.active {
+      display: flex;
+    }
+    .nav-menu li {
+      text-align: center;
+      margin: 0.3rem 0;
+    }
+    .nav-link,
+    .btn-cta {
+      display: block;
+      padding: 1rem;
+    }
+  
+    /* Hamburger → “X” animation */
+    .menu-icon.open .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    .menu-icon.open .bar:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-icon.open .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }

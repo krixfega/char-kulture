@@ -1,0 +1,1 @@
+export default function Booking() { return <h1>Book Now</h1>; }
