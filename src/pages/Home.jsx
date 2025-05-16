@@ -1,6 +1,9 @@
 import { NavLink } from 'react-router-dom';
 import './Home.css';
 import ServiceCard from '../components/ServiceCard';
+import Menu from '../components/Menu';
+import Testimonials from '../components/Testimonials';
+import Footer from '../components/Footer';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -94,7 +97,7 @@ export default function Home() {
         </Swiper>
       </section>
       {/* Gallery Preview */}
-      <section className="gallery-preview">
+      {/* <section className="gallery-preview">
         <div className="gallery-pretitle">Our Gallery</div>
         <h2 className="gallery-title">A Taste of Our Craft</h2>
 
@@ -108,7 +111,17 @@ export default function Home() {
             </NavLink>
           ))}
         </div>
-      </section>
+      </section> */}
+
+      {/* Menu Component */}
+      <Menu />
+
+      {/* Testimonials Component */}
+      <Testimonials />
+
+      {/* Footer Component */}
+      <Footer />
+
     </>
   );
 }
