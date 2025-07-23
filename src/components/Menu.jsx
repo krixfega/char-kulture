@@ -87,8 +87,8 @@ const Menu = () => {
   };
 
   return (
-    <div className="bg-[var(--primary-bg)]  py-16">
-      <div className="container mx-auto px-4">
+    <div className="bg-[var(--primary-bg)] py-16">
+      <div className="container mx-auto px-4 !max-w-[1500px]">
         <motion.div 
           className="text-center mb-12"
           initial={{ opacity: 0, y: -20 }}

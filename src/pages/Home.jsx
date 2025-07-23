@@ -74,7 +74,7 @@ export default function Home() {
         </div>
       </section>
       <section className="services">
-        <div className="services-pretitle">Our Services</div>
+        <div className="services-pretitle mb-6">Our Services</div>
         <h2 className="services-title">Our Specialty</h2>
 
         {/* 1️⃣ Swiper Carousel */}

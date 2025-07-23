@@ -12,6 +12,7 @@
     transition: transform 0.2s, box-shadow 0.2s;
     text-align: center;
     cursor: pointer;
+    max-width: 1500px !important;
   }
   
   .service-card:hover {

@@ -10,7 +10,7 @@ export default function Navbar() {
     { to: '/',       label: 'Home'    },
     { to: '/services', label: 'Services' },
     { to: '/about',    label: 'About'   },
-    { to: '/contact',  label: 'Contact' },
+    // { to: '/contact',  label: 'Contact' },
     { to: '/gallery',  label: 'Gallery' },
   ];
 
@@ -49,7 +49,7 @@ export default function Navbar() {
           <li>
             <NavLink
               to="/book"
-              className="btn-cta"
+              className="btn-cta ml-14"
               onClick={() => setIsOpen(false)}
             >
               Book Now

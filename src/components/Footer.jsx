@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Map, Phone, Mail, Clock, Check } from 'lucide-react';
 import logo from '../assets/logo.png';
@@ -29,8 +29,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full py-12 mt-12 mb-0 bg-[var(--text-dark)] animate-slideUp">
-      <div className="container mx-auto px-4">
+    <footer className="w-full  py-12 mb-0 bg-[var(--text-dark)] animate-slideUp">
+      <div className="container mx-auto px-4 !max-w-[1600px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
@@ -41,16 +41,16 @@ export default function Footer() {
               There cursus massa at urnaaculis estieSed aliquamellus vitae ultrs condmentum leo massamollis its estiegittis miristum.
             </p>
             <div className="flex space-x-2">
-              <a href="#" className="bg-amber-600 hover:bg-amber-700 text-white p-2 rounded-full">
+              <a href="#" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
                 <Facebook size={16} />
               </a>
-              <a href="#" className="bg-amber-600 hover:bg-amber-700 text-white p-2 rounded-full">
+              <a href="#" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
                 <Twitter size={16} />
               </a>
-              <a href="#" className="bg-amber-600 hover:bg-amber-700 text-white p-2 rounded-full">
+              <a href="#" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
                 <Instagram size={16} />
               </a>
-              <a href="#" className="bg-amber-600 hover:bg-amber-700 text-white p-2 rounded-full">
+              <a href="#" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
                 <Linkedin size={16} />
               </a>
             </div>
@@ -112,8 +112,8 @@ export default function Footer() {
         
         {/* Copyright */}
         <div className="text-center mt-8 pt-6 border-t border-gray-200">
-          <p className="text-gray-600">
-            &copy; {currentYear} <span className="text-amber-600 font-playball">CaterServ</span>. All Rights Reserved.
+          <p className="text-white">
+            &copy; {currentYear} <span className="text-[var(--accent)] font-playball">CaterServ</span>. All Rights Reserved.
           </p>
         </div>
       </div>
