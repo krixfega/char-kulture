@@ -6,9 +6,9 @@ import ValuesSection from '../components/ValueSection';
 import CTASection from '../components/CTASection';
 import Footer from '../components/Footer';
 
-// Sample images - replace these with your actual image paths
+// Image paths
 import chefPortrait from '../assets/img/Chef.jpg';
-import kitchenAction from '../assets/img/KitchenAction.jpg';
+import kitchenAction from '../assets/img/Kitchen-action.jpg';
 import farmVisit from '../assets/img/farm.jpg';
 import teamPhoto from '../assets/img/Team.jpg';
 
