@@ -1,6 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 import './Testimonials.css'; 
-import { WOW } from 'wowjs';
 
 // Import Swiper and modules
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -43,12 +42,26 @@ export default function Testimonials() {
   ];
 
   // Animation classes for WOW.js integration
-
-useEffect(() => {
-  const wow = new WOW({ boxClass: 'wow', animateClass: 'animated', offset: 0, mobile: true, live: true });
-  wow.init();
-}, []);
-
+  useEffect(() => {
+    const initWow = async () => {
+      try {
+        const WOWModule = await import('wowjs');
+        const WOW = WOWModule.default || WOWModule;
+        const wow = new WOW({ 
+          boxClass: 'wow', 
+          animateClass: 'animated', 
+          offset: 0, 
+          mobile: true, 
+          live: true 
+        });
+        wow.init();
+      } catch (error) {
+        console.error('Failed to load WOW.js:', error);
+      }
+    };
+    
+    initWow();
+  }, []);
 
   return (
     <div className="container-fluid py-6">
