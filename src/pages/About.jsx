@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 
 // Image paths
 import chefPortrait from '../assets/img/Chef.jpg';
-import kitchenAction from '../assets/img/Kitchen-action.jpg';
+import kitchenAction from '../assets/img/kitchen-action.jpg';
 import farmVisit from '../assets/img/farm.jpg';
 import teamPhoto from '../assets/img/Team.jpg';
 
