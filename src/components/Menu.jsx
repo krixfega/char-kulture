@@ -5,12 +5,12 @@ import image1 from '../assets/img/menu-01.jpg';
 import image2 from '../assets/img/menu-02.jpg';
 import image3 from '../assets/img/menu-03.jpg';
 import image4 from '../assets/img/menu-04.jpg';
-import image5 from '../assets/img/menu-05.jpg';
+// import image5 from '../assets/img/menu-05.jpg';
 import image6 from '../assets/img/menu-06.jpg';
 import image7 from '../assets/img/menu-07.jpg';
-import image8 from '../assets/img/menu-08.jpg';
+// import image8 from '../assets/img/menu-08.jpg';
 import image9 from '../assets/img/menu-09.jpg';
-import image10 from '../assets/img/menu-10.jpg';
+// import image10 from '../assets/img/menu-10.jpg';
 
 const Menu = () => {
   const [activeTab, setActiveTab] = useState('tab-6');
@@ -88,7 +88,7 @@ const Menu = () => {
 
   return (
     <div className="bg-[var(--primary-bg)] py-16">
-      <div className="container mx-auto px-4 !max-w-[1500px]">
+      <div className="container mx-auto px-4 lg:!max-w-[1200px] 2xl:!max-w-[1500px]">
         <motion.div 
           className="text-center mb-12"
           initial={{ opacity: 0, y: -20 }}

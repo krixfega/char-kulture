@@ -262,7 +262,7 @@ const Gallery = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="lg:!max-w-[1200px] 2xl:!max-w-[1500px] mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -307,7 +307,7 @@ const Gallery = () => {
 
       {/* Gallery Content */}
       <section id="gallery-content" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="lg:!max-w-[1200px] 2xl:!max-w-[1500px] mx-auto">
           {/* Gallery Header */}
           <motion.div 
             className="text-center mb-16"
@@ -367,7 +367,7 @@ const Gallery = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <div className="max-w-7xl mx-auto px-4 text-center">
+        <div className="lg:!max-w-[1200px] 2xl:!max-w-[1500px] mx-auto px-4 text-center">
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}

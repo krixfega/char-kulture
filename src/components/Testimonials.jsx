@@ -65,9 +65,9 @@ export default function Testimonials() {
 
   return (
     <div className="container-fluid py-6">
-      <div className="container !max-w-[1500px]">
-        <div className="text-center wow bounceInUp" data-wow-delay="0.1s">
-          <small className="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Testimonial</small>
+      <div className="container lg:!max-w-[1200px] 2xl:!max-w-[1500px]">
+        <div className="text-center">
+          <span className="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Testimonial</span>
           <h1 className="display-5 mb-5">What Our Customers Say!</h1>
         </div>
 

@@ -30,7 +30,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full  py-12 mb-0 bg-[var(--text-dark)] animate-slideUp">
-      <div className="container mx-auto px-4 !max-w-[1600px]">
+      <div className="container mx-auto px-4 lg:!max-w-[1200px] 2xl:!max-w-[1600px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>

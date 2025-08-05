@@ -245,7 +245,7 @@ const Services = () => {
 
       {/* Detailed Service Cards */}
       <div id="service-details" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="lg:max-w-[1200px] 2xl:max-w-[1500px] mx-auto">
           <div className="text-center mb-16">
             <span className="inline-block bg-[var(--text-dark)] text-[var(--accent)] px-6 py-2 rounded-full font-playball text-xl mb-4">
               Service Details
