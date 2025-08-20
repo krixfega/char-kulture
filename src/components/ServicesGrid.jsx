@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
@@ -49,12 +50,12 @@ const ServicesGrid = ({ services, onServiceClick }) => {
               key={service.id}
               variants={cardVariants}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group cursor-pointer"
+              className="group cursor-pointer h-full"
               onClick={() => onServiceClick && onServiceClick(service)}
             >
-              <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+              <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden flex-shrink-0">
                   <img
                     src={service.image}
                     alt={service.title}
@@ -69,16 +70,16 @@ const ServicesGrid = ({ services, onServiceClick }) => {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <h3 className="text-2xl font-playball text-[var(--text-dark)] mb-3 group-hover:text-[var(--accent)] transition-colors duration-300">
                     {service.title}
                   </h3>
                   
-                  <p className="font-sans text-gray-600 mb-4 leading-relaxed">
+                  <p className="font-sans text-gray-600 mb-4 leading-relaxed flex-1">
                     {service.shortDescription}
                   </p>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center justify-between mt-auto">
                     <div>
                       <span className="text-sm text-gray-500">Starting from</span>
                       <div className="text-xl font-playball text-[var(--text-dark)]">

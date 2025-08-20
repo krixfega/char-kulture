@@ -25,78 +25,78 @@ const Services = () => {
   const services = [
     {
       id: 'private-chef',
-      title: 'Private Chef',
+      title: 'Private Dining',
       category: 'Personal',
-      shortDescription: 'Intimate dining experiences crafted in your home with personalized menus.',
-      description: 'Transform your dining room into a world-class restaurant with our private chef service. Our experienced chefs create bespoke menus tailored to your preferences, dietary requirements, and special occasions.',
+      shortDescription: 'At Char, the private dining experience extends far beyond the preparation of food. It is art; curated for your pleasure.',
+      description: 'From our menu planning to the complexities of guest interaction, we are here studying the finer details. To help refine your understanding of cuisine, yes, but also very importantly to learn invaluable lessons about human nature, business relationships, and premium hospitality. As hosts, these experiences have transformed our understanding of cuisine and life itself.',
       image: privateChefImg,
       pricing: '$200/person',
       duration: '3-4 hours',
       badge: 'Most Popular',
       features: [
-        'Personalized menu consultation',
-        'Fresh ingredients sourced daily',
-        'Professional chef and sous chef',
-        'Complete setup and cleanup',
-        'Wine pairing recommendations',
-        'Dietary accommodation available'
+        'Adapting to Diverse Palates - catering to allergies, vegans, no-carb diets without compromising flavor',
+        'Time Management - optimal temperatures, perfect timing, comfortable guest engagement',
+        'The Importance of Ambiance - lighting, music, decor that transport guests to intimate spaces',
+        'Building Relationships - plotting interactions that lead to deeper connections between guests',
+        'Premium hospitality experience',
+        'Complete kitchen cleanup'
       ]
     },
     {
       id: 'event-catering',
-      title: 'Event Catering',
+      title: 'Social & Corporate Events Catering',
       category: 'Events',
-      shortDescription: 'Full-service catering for weddings, corporate events, and celebrations.',
-      description: 'Make your special event unforgettable with our comprehensive catering services. From intimate gatherings to grand celebrations, we handle everything from menu planning to full-service execution.',
+      shortDescription: 'For social & corporate events, we create an experience. This is more than just food; it\'s the tableware, the decoration, and presentation.',
+      description: 'Whether it\'s a canapé-style cocktail hour, a buffet spread, or plated fine dining, we strive to optimize it into something memorable. Our catering services complement your occasion. Be it stylish weddings, or product launches, baby showers, team retreats, executive luncheons, etc. We can scale from a private dining session of 10 to breakfast for 100, based on your needs, all without ever compromising on quality.',
       image: eventCateringImg,
       pricing: '$85/person',
       duration: 'Full day',
       badge: 'Full Service',
       features: [
-        'Custom menu design',
-        'Professional service staff',
-        'Complete event coordination',
-        'Elegant presentation and setup',
-        'Bar service available',
-        'Flexible venue options'
+        'Stylish weddings and product launches',
+        'Baby showers and team retreats',
+        'Executive luncheons and corporate events',
+        'Scale from 10 to 100+ guests without compromising quality',
+        'Canapé-style cocktail hours, buffet spreads, plated fine dining',
+        'Premium tableware, decoration, and presentation'
       ]
     },
     {
       id: 'tray-delivery',
-      title: 'Tray Deliveries',
+      title: 'Food Tray Deliveries',
       category: 'Delivery',
-      shortDescription: 'Ready-to-eat gourmet meals delivered fresh to your doorstep.',
-      description: 'Enjoy restaurant-quality meals in the comfort of your home with our convenient tray delivery service. Perfect for busy families, office meetings, or when you want exceptional food without the fuss.',
+      shortDescription: 'Each tray is a complete culinary experience; it is expertly curated and customized to your request & need.',
+      description: 'Our food trays are perfect for birthdays, picnic hangouts, thank-you gestures, or just to say "I\'m thinking of you". And the variety of flavors too! It\'s so beautiful to see how they combine together to tell a story. Our food trays are available for individuals, couples, families, or picnic packages.',
       image: trayDeliveryImg,
       pricing: '$45/tray',
       duration: 'Same day',
       badge: 'Convenient',
       features: [
-        'Weekly menu selection',
-        'Fresh daily preparation',
-        'Eco-friendly packaging',
-        'Contactless delivery',
-        'Subscription discounts',
-        'Corporate bulk orders'
+        'Perfect for birthdays, picnic hangouts, thank-you gestures',
+        'Just to say "I\'m thinking of you" moments',
+        'Beautiful variety of flavors that tell a story',
+        'Individual, couples, families, or picnic packages',
+        'Exceptional customer service',
+        'Efficient operations and delivery'
       ]
     },
     {
-      id: 'farm-to-table',
-      title: 'Farm-to-Table',
-      category: 'Specialty',
-      shortDescription: 'Seasonal menus featuring the freshest local ingredients.',
-      description: 'Experience the pure flavors of locally-sourced, seasonal ingredients with our farm-to-table service. We partner directly with local farms to bring you the freshest, most sustainable dining experience.',
+      id: 'breakfast-delivery',
+      title: 'Breakfast Tray Delivery',
+      category: 'Delivery',
+      shortDescription: 'Start your day with something beautiful and you\'ll go on ahead with a smile.',
+      description: 'Our breakfast tray at Char Kulture is prepared with the intricacies & skill of this important ritual. We have filled them with freshness, flavor, and positive energy in mind. Whether it\'s breakfast in bed for a loved one or a gift to a colleague, there\'s a lot of thoughtfulness that our tray brings to the table.',
       image: farmToTableImg,
-      pricing: '$120/person',
-      duration: '2-3 hours',
-      badge: 'Sustainable',
+      pricing: '$35/tray',
+      duration: 'Morning delivery',
+      badge: 'Morning Special',
       features: [
-        'Direct farm partnerships',
-        'Seasonal menu rotation',
-        'Sustainable practices',
-        'Educational farm stories',
-        'Zero-waste commitment',
-        'Local producer support'
+        'Tea. Or is it coffee with you? What does sunshine feel like to you?',
+        'Omelette or scrambled? Shakshuka paired with naan bread?',
+        'Breakfast in bed for a loved one or gift to a colleague',
+        'Customizable to fit dietary preferences, themes, or special messages',
+        'All handwritten with love and warmth from Char Kulture',
+        'Wake someone up to something unforgettable'
       ]
     }
   ];
@@ -129,70 +129,70 @@ const Services = () => {
   const detailedServices = [
     {
       category: 'Signature Experience',
-      title: 'Private Chef Service',
-      description: 'Indulge in an exclusive culinary journey where our master chefs transform your home into a fine dining destination. Each dish is carefully crafted with seasonal ingredients and presented with artistic flair.',
+      title: 'Private Dining',
+      description: 'At Char, the private dining experience extends far beyond the preparation of food. It is art; curated for your pleasure. From our menu planning to the complexities of guest interaction, we are here studying the finer details. These experiences have transformed our understanding of cuisine and life itself.',
       image: chefCookingImg,
       pricing: '$200/person',
       duration: 'Full evening',
       badge: 'Premium',
       features: [
-        'Personal chef consultation',
-        'Market-fresh ingredients',
-        'Multi-course tasting menu',
-        'Professional plating and service',
-        'Wine pairing expertise',
-        'Complete kitchen cleanup'
+        'Adapting to Diverse Palates - allergies, vegan, no-carb without compromising flavor',
+        'Time Management - optimal temperatures and perfect timing',
+        'The Importance of Ambiance - lighting, music, decor',
+        'Building Relationships - deeper connections between guests',
+        'Lessons about human nature and business relationships',
+        'Premium hospitality experience'
       ]
     },
     {
-      category: 'Celebration Catering',
-      title: 'Event & Wedding Catering',
-      description: 'Create magical moments with our comprehensive event catering service. From intimate anniversaries to grand weddings, we orchestrate every detail to perfection.',
+      category: 'Event Excellence',
+      title: 'Social & Corporate Events Catering',
+      description: 'For social & corporate events, we create an experience. This is more than just food; it\'s the tableware, the decoration, and presentation. From canapé-style cocktail hours to plated fine dining, we complement your occasion perfectly.',
       image: eventSetupImg,
       pricing: '$85/person',
       duration: 'Full event',
       badge: 'Full Service',
       features: [
-        'Event planning consultation',
-        'Custom menu creation',
-        'Professional service team',
-        'Elegant table settings',
-        'Coordinated timing',
-        'Post-event cleanup'
+        'Stylish weddings and product launches',
+        'Baby showers and team retreats',
+        'Executive luncheons and corporate events',
+        'Scale from 10 to 100+ without compromising quality',
+        'Food feeds the soul of a gathering',
+        'Complete tableware and decoration'
       ]
     },
     {
-      category: 'Farm Fresh',
-      title: 'Seasonal Farm-to-Table',
-      description: 'Experience the purest flavors of each season with ingredients sourced directly from our partner farms. Every meal tells the story of our local agricultural community.',
-      image: freshIngredientsImg,
-      pricing: '$120/person',
-      duration: 'Seasonal menu',
-      badge: 'Sustainable',
-      features: [
-        'Local farm partnerships',
-        'Seasonal ingredient focus',
-        'Sustainable sourcing',
-        'Educational component',
-        'Zero-waste approach',
-        'Community support'
-      ]
-    },
-    {
-      category: 'Convenient Delivery',
-      title: 'Gourmet Tray Service',
-      description: 'Bring restaurant-quality cuisine to your busy lifestyle with our convenient delivery service. Each tray is prepared fresh daily and delivered with care.',
+      category: 'Thoughtful Delivery',
+      title: 'Food Tray Deliveries',
+      description: 'Each tray is a complete culinary experience; it is expertly curated and customized to your request & need. Our food trays are perfect for birthdays, picnic hangouts, thank-you gestures, or just to say "I\'m thinking of you".',
       image: deliveryImg,
       pricing: '$45/tray',
       duration: 'Same day delivery',
       badge: 'Quick & Fresh',
       features: [
-        'Daily fresh preparation',
-        'Diverse menu options',
-        'Reliable delivery',
-        'Eco-friendly packaging',
-        'Subscription options',
-        'Corporate solutions'
+        'Perfect for birthdays and picnic hangouts',
+        'Thank-you gestures and "thinking of you" moments',
+        'Beautiful variety of flavors that tell a story',
+        'Individual, couples, families, or picnic packages',
+        'Exceptional customer service',
+        'Efficient operations'
+      ]
+    },
+    {
+      category: 'Morning Ritual',
+      title: 'Breakfast Tray Delivery',
+      description: 'You\'ve heard it so many times only because it\'s true: "breakfast is the most important meal of the day". Start your day with something beautiful and you\'ll go on ahead with a smile. Our breakfast tray at Char Kulture is prepared with the intricacies & skill of this important ritual.',
+      image: freshIngredientsImg,
+      pricing: '$35/tray',
+      duration: 'Morning delivery',
+      badge: 'Morning Special',
+      features: [
+        'Tea. Or is it coffee with you? What does sunshine feel like?',
+        'Omelette or scrambled? Shakshuka paired with naan bread?',
+        'Breakfast in bed for a loved one or gift to a colleague',
+        'Customizable to dietary preferences, themes, special messages',
+        'All handwritten with love and warmth from Char Kulture',
+        'Wake someone up to something unforgettable'
       ]
     }
   ];

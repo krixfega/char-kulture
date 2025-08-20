@@ -24,13 +24,34 @@ import gal3 from '../assets/gallery/menu-02.jpg';
 import gal4 from '../assets/gallery/menu-03.jpg';
 
 export default function Home() {
-    const services = [
-        { title: 'Private Chef',    img: privateChef,   desc: 'In-home gourmet experiences tailored to you.', slug:'private-chef' },
-        { title: 'Event Catering',  img: eventCatering, desc: 'Social & corporate events with flair.', slug:'event-catering' },
-        { title: 'Tray Deliveries', img: trayDelivery,  desc: 'Ready-to-eat trays delivered to your door.', slug:'tray-deliveries' },
-        { title: 'Farm-to-Table',   img: farmToTable,   desc: 'Seasonal menus with local ingredients.', slug:'farm-to-table' },
-      ];
-    const galleryThumbs = [gal1, gal2, gal3, gal4];
+  const services = [
+    { 
+      title: 'Private Dining', 
+      img: privateChef, 
+      desc: 'Private dining experience extends far beyond food preparation - it is art; curated for your pleasure.', 
+      slug: 'private-chef' 
+    },
+    { 
+      title: 'Social & Corporate Events Catering', 
+      img: eventCatering, 
+      desc: 'We create an experience. More than just food; it\'s tableware, decoration, and presentation.', 
+      slug: 'event-catering' 
+    },
+    { 
+      title: 'Food Tray Deliveries', 
+      img: trayDelivery, 
+      desc: 'Complete culinary experiences expertly curated for birthdays, thank-you gestures, or just to say "I\'m thinking of you".', 
+      slug: 'tray-deliveries' 
+    },
+    { 
+      title: 'Breakfast Tray Delivery', 
+      img: farmToTable, // Consider using a breakfast-specific image
+      desc: 'Start your day with something beautiful and you\'ll go ahead with a smile. Prepared with intricacies & skill.', 
+      slug: 'breakfast-delivery' 
+    },
+  ];
+
+  const galleryThumbs = [gal1, gal2, gal3, gal4];
   return (
     <>
       {/* Hero */}

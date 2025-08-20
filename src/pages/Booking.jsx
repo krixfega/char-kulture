@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import HeroSection from '../components/Hero';

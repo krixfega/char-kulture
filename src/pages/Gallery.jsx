@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { Camera, Filter, Grid3x3 } from 'lucide-react';
 import HeroSection from '../components/Hero';
@@ -25,7 +26,7 @@ import dish5 from '../assets/gallery./dish-5.jpg';
 import dish6 from '../assets/gallery./dish-6.jpg';
 import behindScenes1 from '../assets/gallery./behind-the-scenes-1.jpg';
 import behindScenes2 from '../assets/gallery./behind-the-scenes-2.jpg';
-import behindScenes3 from '../assets/gallery./behind-the-scenes-3.jpg';
+// import behindScenes3 from '../assets/gallery./behind-the-scenes-3.jpg';
 import farmVisit1 from '../assets/gallery./farm-visit-1.jpg';
 import farmVisit2 from '../assets/gallery./farm-visit-2.jpg';
 

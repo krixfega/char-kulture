@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { User, Mail, Phone, Calendar, Users, MapPin, Clock, MessageSquare, ChefHat, CreditCard } from 'lucide-react';
 
@@ -27,10 +28,10 @@ const BookingForm = () => {
   });
 
   const services = [
-    { id: 'private-chef', name: 'Private Chef Service', price: 'From $200/person', duration: '3-4 hours' },
+    { id: 'private-chef', name: 'Private Dining Service', price: 'From $200/person', duration: '3-4 hours' },
     { id: 'event-catering', name: 'Event Catering', price: 'From $85/person', duration: 'Full event' },
     { id: 'tray-delivery', name: 'Tray Deliveries', price: 'From $45/tray', duration: 'Same day' },
-    { id: 'farm-to-table', name: 'Farm-to-Table Experience', price: 'From $120/person', duration: '2-3 hours' }
+    { id: 'breakfast-delivery', name: 'Breakfast Tray Delivery', price: 'From $120/person', duration: '2-3 hours' }
   ];
 
   const budgetRanges = [
