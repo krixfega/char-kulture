@@ -546,7 +546,7 @@ const BlogListing = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <motion.section
+      {/* <motion.section
         className="py-16 bg-[var(--text-dark)] text-white"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -583,7 +583,7 @@ const BlogListing = () => {
             </div>
           </motion.div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Footer */}
       <Footer />

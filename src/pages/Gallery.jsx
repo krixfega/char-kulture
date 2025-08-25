@@ -379,23 +379,23 @@ const Gallery = () => {
               Follow Us
             </span>
             <h2 className="text-5xl font-playball text-[var(--text-dark)] mb-6">
-              @CharKulture
+              @char_kulture
             </h2>
             <p className="text-xl font-sans text-[var(--text-dark)] mb-8 max-w-3xl mx-auto leading-relaxed">
               Stay updated with our latest culinary creations and behind-the-scenes moments on Instagram
             </p>
             
-            <motion.button
+            {/* <motion.button
               className="bg-[var(--text-dark)] text-[var(--accent)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-[var(--text-dark)] transition-all duration-300 shadow-lg hover:shadow-xl"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Follow on Instagram
-            </motion.button>
+            </motion.button> */}
           </motion.div>
 
           {/* Instagram Preview Grid */}
-          <motion.div 
+          {/* <motion.div 
             className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -428,7 +428,7 @@ const Gallery = () => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </motion.div> */}
         </div>
       </motion.section>
 

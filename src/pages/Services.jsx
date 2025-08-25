@@ -229,12 +229,12 @@ const Services = () => {
       />
 
       {/* Services Grid */}
-      <div id="services-grid">
+      {/* <div id="services-grid">
         <ServicesGrid
           services={services}
           onServiceClick={handleServiceClick}
         />
-      </div>
+      </div> */}
 
       {/* Process Section */}
       <ProcessSection

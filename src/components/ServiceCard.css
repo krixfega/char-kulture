@@ -1,80 +1,289 @@
-.service-card-link {
+.services {
+  padding: 4rem 0;
+}
+
+.services-pretitle {
+  text-align: center;
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.services-title {
+  text-align: center;
+  font-family: 'Playball', cursive;
+  font-size: 3rem;
+  color: var(--text-dark);
+  margin-bottom: 3rem;
+}
+
+/* Desktop/Tablet Carousel */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.services-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.services-swiper {
+  padding-bottom: 60px !important;
+}
+
+.service-carousel-link {
   display: block;
   text-decoration: none;
-  height: 100%; /* Add this to ensure link takes full height */
+  color: inherit;
+  height: 100%;
 }
 
-.service-card {
-  background: var(--text-dark);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.service-card-carousel {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  height: 800px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-align: center;
-  cursor: pointer;
-  max-width: 1500px !important;
-  height: 100%;
-  min-height: 300px;
+  position: relative;
 }
 
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.service-card-carousel:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
 }
 
-.service-card-img-wrapper {
-  width: 100%;
-  height: 200px;
+.service-card-carousel .service-card-img-wrapper {
+  height: 250px;
+  position: relative;
   overflow: hidden;
-  flex-shrink: 0; /* Keep this */
+  width: 100%;
+  flex-shrink: 0;
 }
 
-.service-card-img {
+.service-card-carousel .service-card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.6s ease;
 }
 
-.service-card-title {
+.service-card-carousel:hover .service-card-img {
+  transform: scale(1.1);
+}
+
+.service-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.3) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.service-card-carousel:hover .service-card-overlay {
+  opacity: 1;
+}
+
+.service-card-carousel .service-card-content {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.service-card-carousel .service-card-title {
   font-family: 'Playball', cursive;
   font-size: 1.75rem;
-  color: var(--accent);
-  margin: 1rem 0 -0.5rem;
-  flex-shrink: 0; /* Prevent title from shrinking */
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
-.service-card-desc {
+.service-card-carousel .service-card-desc {
   font-family: 'Open Sans', sans-serif;
-  color: var(--accent);
-  font-size: 1rem;
-  padding: 0 2.5rem 0.5rem;
-  flex-grow: 1; /* Remove flex: 1, keep only flex-grow: 1 */
-  display: flex;
-  align-items: center; /* Center the text vertically in the available space */
-  justify-content: center;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1rem;
 }
 
+.service-card-cta {
+  margin-top: auto;
+}
+
+.learn-more {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.service-card-carousel:hover .learn-more {
+  color: var(--text-dark);
+  transform: translateX(5px);
+}
+
+/* Custom Navigation Buttons */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-dark);
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.swiper-button-prev-custom {
+  left: -25px;
+}
+
+.swiper-button-next-custom {
+  right: -25px;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  background: var(--accent);
+  color: var(--text-dark);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Custom Pagination */
+.swiper-pagination-custom {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-custom .swiper-pagination-bullet-active {
+  background: var(--accent);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Mobile Stack */
 @media (max-width: 768px) {
-  .service-card {
-    font-size: 0.9rem;
-    width: 250px;
-    margin: auto;
+  .desktop-only {
+    display: none;
   }
-
-  .service-card-img-wrapper {
+  
+  .mobile-only {
+    display: block;
+  }
+  
+  .services-stack {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .service-stack-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .service-card-mobile {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card-mobile:active {
+    transform: scale(0.98);
+  }
+  
+  .service-card-mobile .service-card-img-wrapper {
     height: 200px;
+    overflow: hidden;
   }
-
-  .service-card-title {
+  
+  .service-card-mobile .service-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .service-card-mobile .service-card-content {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .service-card-mobile .service-card-title {
+    font-family: 'Playball', cursive;
     font-size: 1.5rem;
-    margin: 0.75rem 0 -0.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    line-height: 1.2;
   }
+  
+  .service-card-mobile .service-card-desc {
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .services-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
 
-  .service-card-desc {
-    font-size: 0.9rem;
-    padding: 0 1rem 0.5rem;
+/* Tablet adjustments */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .swiper-button-prev-custom {
+    left: 10px;
+  }
+  
+  .swiper-button-next-custom {
+    right: 10px;
   }
 }

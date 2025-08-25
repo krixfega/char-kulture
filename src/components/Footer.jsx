@@ -16,10 +16,10 @@ export default function Footer() {
   
   // Menu items with icons
   const specialFacilities = [
-    { name: "Cheese Burger", href: "#" },
-    { name: "Sandwich", href: "#" },
-    { name: "Panner Burger", href: "#" },
-    { name: "Special Sweets", href: "#" }
+    { name: "Classic Jollof", href: "#" },
+    { name: "Naija Herb Ragu Linguine", href: "#" },
+    { name: "Authentic Traditional Fried Rice", href: "#" },
+    { name: "Shakshuka & Naan Bread", href: "#" }
   ];
   
   // Social gallery images
@@ -27,6 +27,13 @@ export default function Footer() {
     image1, image2, image3, 
     image4, image5, image6
   ];
+
+  // Add this component in your Footer.jsx file
+  const TikTokIcon = ({ size = 16 }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.321 5.562a5.124 5.124 0 0 1-.443-.258 6.228 6.228 0 0 1-1.137-.966c-.849-.849-1.349-2.019-1.349-3.338h-3.064c0 .21-.011.42-.032.628-.021.209-.053.417-.095.623v9.799c0 2.106-1.714 3.82-3.82 3.82-2.106 0-3.82-1.714-3.82-3.82s1.714-3.82 3.82-3.82c.398 0 .781.061 1.142.174V5.339a6.890 6.890 0 0 0-1.142-.095C5.714 5.244 2.5 8.458 2.5 12.225s3.214 6.981 6.981 6.981 6.981-3.214 6.981-6.981V8.901a9.064 9.064 0 0 0 5.298 1.696V7.533a5.124 5.124 0 0 1-1.439-1.971Z"/>
+    </svg>
+  );
 
   return (
     <footer className="w-full  py-12 mb-0 bg-[var(--text-dark)] animate-slideUp">
@@ -38,21 +45,24 @@ export default function Footer() {
                 <img src={logo} alt="Char Kulture logo" className="logo-img" />
             </NavLink>
             <p className="text-[var(--primary-bg)] mb-6 leading-relaxed">
-              There cursus massa at urnaaculis estieSed aliquamellus vitae ultrs condmentum leo massamollis its estiegittis miristum.
+              Where culinary art meets culture. Join the Char Tribe to experience a piece of home!
             </p>
             <div className="flex space-x-2">
-              <a href="#" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
+              {/* <a href="#" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
                 <Facebook size={16} />
               </a>
               <a href="#" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
                 <Twitter size={16} />
+              </a> */}
+              <a href="https://www.tiktok.com/@char.kulture?_t=ZS-8zAfrFcFdJI&_r=1" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
+                <TikTokIcon size={16} />
               </a>
-              <a href="#" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
+              <a href="https://www.instagram.com/char_kulture?igsh=MmF5NzZka3VmcjNk" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
                 <Instagram size={16} />
               </a>
-              <a href="#" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
+              {/* <a href="#" className="bg-[var(--accent)] hover:bg-white text-white hover:text-[var(--accent)] p-2 rounded-full">
                 <Linkedin size={16} />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -79,15 +89,15 @@ export default function Footer() {
             <div className="flex flex-col space-y-3">
               <p className="flex items-start text-[var(--primary-bg)]">
                 <span className="text-[var(--accent)] mr-2 mt-1"><Map size={16} /></span>
-                123 Street, New York, USA
+                Gbagada, Lagos, Nigeria.
               </p>
               <p className="flex items-start text-[var(--primary-bg)]">
                 <span className="text-[var(--accent)] mr-2 mt-1"><Phone size={16} /></span>
-                (+012) 3456 7890 123
+                (+234) 903 285 1433
               </p>
               <p className="flex items-start text-[var(--primary-bg)]">
                 <span className="text-[var(--accent)] mr-2 mt-1"><Mail size={16} /></span>
-                info@example.com
+                info@charkulture.com
               </p>
               <p className="flex items-start text-[var(--primary-bg)]">
                 <span className="text-[var(--accent)] mr-2 mt-1"><Clock size={16} /></span>
@@ -113,7 +123,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="text-center mt-8 pt-6 border-t border-gray-200">
           <p className="text-white">
-            &copy; {currentYear} <span className="text-[var(--accent)] font-playball">CaterServ</span>. All Rights Reserved.
+            &copy; {currentYear} <span className="text-[var(--accent)] font-playball">Char Kulture</span>. All Rights Reserved.
           </p>
         </div>
       </div>

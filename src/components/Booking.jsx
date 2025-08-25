@@ -3,6 +3,75 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { User, Mail, Phone, Calendar, Users, MapPin, Clock, MessageSquare, ChefHat, CreditCard } from 'lucide-react';
 
+
+  const InputField = ({ icon: Icon, label, value, onChange, type = "text", options = null, required = false }) => (
+    <motion.div 
+      className="relative"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      <label className="block text-sm font-semibold text-[var(--text-dark)] mb-2">
+        {label} {required && <span className="text-red-500">*</span>}
+      </label>
+      
+      <div className="relative">
+        <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
+          <Icon className="w-5 h-5 text-gray-400" />
+        </div>
+        
+        {options ? (
+          <select
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-lg font-sans transition-all duration-300 focus:border-[var(--accent)] focus:outline-none bg-white"
+          >
+            <option value="">Select {label.toLowerCase()}</option>
+            {options.map((option, index) => (
+              <option key={index} value={typeof option === 'string' ? option : option.id}>
+                {typeof option === 'string' ? option : option.name}
+              </option>
+            ))}
+          </select>
+        ) : type === 'textarea' ? (
+          <textarea
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            placeholder={`Tell us about your ${label.toLowerCase()}...`}
+            rows={4}
+            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-lg font-sans transition-all duration-300 focus:border-[var(--accent)] focus:outline-none resize-none"
+          />
+        ) : (
+          <input
+            type={type}
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-lg font-sans transition-all duration-300 focus:border-[var(--accent)] focus:outline-none"
+          />
+        )}
+      </div>
+    </motion.div>
+  );
+
+  const ServiceCard = ({ service, isSelected, onSelect }) => (
+    <motion.div
+      className={`p-6 rounded-lg border-2 cursor-pointer transition-all duration-300 ${
+        isSelected 
+          ? 'border-[var(--accent)] bg-[var(--accent)]/10' 
+          : 'border-gray-200 hover:border-[var(--accent)]/50'
+      }`}
+      onClick={() => onSelect(service.id)}
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <h3 className="text-lg font-playball text-[var(--text-dark)] mb-2">
+        {service.name}
+      </h3>
+      <p className="text-[var(--accent)] font-semibold mb-1">{service.price}</p>
+      <p className="text-gray-600 text-sm">{service.duration}</p>
+    </motion.div>
+  );
+
 const BookingForm = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -122,74 +191,6 @@ const BookingForm = () => {
         );
       })}
     </div>
-  );
-
-  const InputField = ({ icon: Icon, label, value, onChange, type = "text", options = null, required = false }) => (
-    <motion.div 
-      className="relative"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-    >
-      <label className="block text-sm font-semibold text-[var(--text-dark)] mb-2">
-        {label} {required && <span className="text-red-500">*</span>}
-      </label>
-      
-      <div className="relative">
-        <div className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
-          <Icon className="w-5 h-5 text-gray-400" />
-        </div>
-        
-        {options ? (
-          <select
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-lg font-sans transition-all duration-300 focus:border-[var(--accent)] focus:outline-none bg-white"
-          >
-            <option value="">Select {label.toLowerCase()}</option>
-            {options.map((option, index) => (
-              <option key={index} value={typeof option === 'string' ? option : option.id}>
-                {typeof option === 'string' ? option : option.name}
-              </option>
-            ))}
-          </select>
-        ) : type === 'textarea' ? (
-          <textarea
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-            placeholder={`Tell us about your ${label.toLowerCase()}...`}
-            rows={4}
-            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-lg font-sans transition-all duration-300 focus:border-[var(--accent)] focus:outline-none resize-none"
-          />
-        ) : (
-          <input
-            type={type}
-            value={value}
-            onChange={(e) => onChange(e.target.value)}
-            className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 rounded-lg font-sans transition-all duration-300 focus:border-[var(--accent)] focus:outline-none"
-          />
-        )}
-      </div>
-    </motion.div>
-  );
-
-  const ServiceCard = ({ service, isSelected, onSelect }) => (
-    <motion.div
-      className={`p-6 rounded-lg border-2 cursor-pointer transition-all duration-300 ${
-        isSelected 
-          ? 'border-[var(--accent)] bg-[var(--accent)]/10' 
-          : 'border-gray-200 hover:border-[var(--accent)]/50'
-      }`}
-      onClick={() => onSelect(service.id)}
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-    >
-      <h3 className="text-lg font-playball text-[var(--text-dark)] mb-2">
-        {service.name}
-      </h3>
-      <p className="text-[var(--accent)] font-semibold mb-1">{service.price}</p>
-      <p className="text-gray-600 text-sm">{service.duration}</p>
-    </motion.div>
   );
 
   const renderStep = () => {
@@ -352,7 +353,7 @@ const BookingForm = () => {
           </motion.div>
         );
 
-      case 4:
+      case 4: {
         const selectedService = services.find(s => s.id === formData.service);
         return (
           <motion.div 
@@ -404,7 +405,7 @@ const BookingForm = () => {
             </div>
           </motion.div>
         );
-
+      }
       default:
         return null;
     }

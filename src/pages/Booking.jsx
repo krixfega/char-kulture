@@ -13,21 +13,21 @@ const Booking = () => {
     {
       icon: Phone,
       title: 'Call Us',
-      info: '+234 (0) 123 456 7890',
+      info: '+234 903 285 1433',
       subInfo: 'Available 9 AM - 9 PM',
       bgColor: 'bg-[var(--accent)]'
     },
     {
       icon: Mail,
       title: 'Email Us',
-      info: 'hello@charkulture.com',
+      info: 'info@charkulture.com',
       subInfo: 'Response within 2 hours',
       bgColor: 'bg-[var(--text-dark)]'
     },
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      info: '+234 (0) 123 456 7890',
+      info: '+234 903 285 1433',
       subInfo: 'Quick responses',
       bgColor: 'bg-green-500'
     }
@@ -294,7 +294,7 @@ const Booking = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="tel:+2341234567890"
+                href="tel:+2349032851433"
                 className="bg-[var(--accent)] text-[var(--text-dark)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-white transition-all duration-300 flex items-center justify-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -304,7 +304,7 @@ const Booking = () => {
               </motion.a>
               
               <motion.a
-                href="https://wa.me/2341234567890"
+                href="https://wa.me/2349032851433"
                 className="border-2 border-[var(--accent)] text-[var(--accent)] px-8 py-4 rounded-full font-semibold text-lg hover:bg-[var(--accent)] hover:text-[var(--text-dark)] transition-all duration-300 flex items-center justify-center gap-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
